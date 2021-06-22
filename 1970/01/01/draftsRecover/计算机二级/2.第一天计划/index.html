@@ -1,45 +1,224 @@
-{# 文章页面 #}
-{% extends 'includes/layout.swig' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
 
-{# page页面(其实就是about)，也是用的这里来处理文章排版 #}
-{% block body %}
-  <article class="markdown-body">
-    <h2 id="post-title">{{ page.title }}
-      {% if is_post() && page.date %} {# 文章页面才显示日期 #}
-        <div id="post-time" datetime="{{ date_xml(page.date) }}">
-          {{ date(page.date, "YYYY-MM-DD") }}
-        </div>
-      {% endif %}
-    </h2>
-    {{ page.content }}
-  </article>
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="word第一天真题这道题目已经连续做了三次，其中文本处理难度不大，但有一些新的知识点需要记录： 1.邮件合并：这个完全是新概念，我之前没有过接触，大致步骤为： 123456graph TD;    点击邮件选项卡--&gt;开始邮件合并;    开始邮件合并--&gt;选择收件人;   选择收件人--&gt;完成合并;     细节介绍为：点击邮件合并前，把光标放到对应点选择收件人时，大多使用另外">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/1970/01/01/draftsRecover/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7/2.%E7%AC%AC%E4%B8%80%E5%A4%A9%E8%AE%A1%E5%88%92/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="word第一天真题这道题目已经连续做了三次，其中文本处理难度不大，但有一些新的知识点需要记录： 1.邮件合并：这个完全是新概念，我之前没有过接触，大致步骤为： 123456graph TD;    点击邮件选项卡--&gt;开始邮件合并;    开始邮件合并--&gt;选择收件人;   选择收件人--&gt;完成合并;     细节介绍为：点击邮件合并前，把光标放到对应点选择收件人时，大多使用另外">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="1970-01-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-22T10:58:05.788Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-  {% if is_post() %}
-    
-    {% if page.prev || page.next  %}
-      <div id="page-prev-next">
-        {# 上一篇文章 #}
-        {% if (page.prev) %}
-          <a id="page-prev-a" href="{{ url_for(page.prev.path) }}"> ← {{ page.prev.title }} </a>
-        {% else %}
-          <div></div> {# 仅用于占位 #}
-        {% endif %}
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-        {# 下一篇文章 #}
-        {% if (page.next) %}
-          <a id="page-next-a" href="{{ url_for(page.next.path) }}"> {{ page.next.title }} → </a>
-        {% endif %}
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
-    {% endif %}
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-draftsRecover/计算机二级/2.第一天计划" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/1970/01/01/draftsRecover/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7/2.%E7%AC%AC%E4%B8%80%E5%A4%A9%E8%AE%A1%E5%88%92/" class="article-date">
+  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+</a>
     
-    {# 背景音频播放 #}
-    {% if theme.post_audio %}
-      {% set bg_color =  theme.theme_color %}
-      {% include 'includes/audio-play.swig' with bg_color %}
-    {% endif %}
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="word第一天真题"><a href="#word第一天真题" class="headerlink" title="word第一天真题"></a>word第一天真题</h1><p>这道题目已经连续做了三次，其中文本处理难度不大，但有一些新的知识点需要记录：</p>
+<h2 id="1-邮件合并："><a href="#1-邮件合并：" class="headerlink" title="1.邮件合并："></a>1.邮件合并：</h2><p>这个完全是新概念，我之前没有过接触，大致步骤为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph TD;</span><br><span class="line">    点击邮件选项卡--&gt;开始邮件合并;</span><br><span class="line">    开始邮件合并--&gt;选择收件人;</span><br><span class="line">   选择收件人--&gt;完成合并;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 
-    {# 文章页面才加打赏功能 #}
-    {% include 'includes/reward.swig' %}
-  {% endif %}
-{% endblock %}
+<h1 id="细节介绍为："><a href="#细节介绍为：" class="headerlink" title="细节介绍为："></a>细节介绍为：</h1><h4 id="点击邮件合并前，把光标放到对应点"><a href="#点击邮件合并前，把光标放到对应点" class="headerlink" title="点击邮件合并前，把光标放到对应点"></a>点击邮件合并前，把光标放到对应点</h4><h4 id="选择收件人时，大多使用另外一个文件合并且大多情况选择信函"><a href="#选择收件人时，大多使用另外一个文件合并且大多情况选择信函" class="headerlink" title="选择收件人时，大多使用另外一个文件合并且大多情况选择信函"></a>选择收件人时，大多使用另外一个文件合并且大多情况选择信函</h4><h4 id="完成合并时默认选项即可"><a href="#完成合并时默认选项即可" class="headerlink" title="完成合并时默认选项即可"></a>完成合并时默认选项即可</h4><h1 id="2-将图片设计为背景"><a href="#2-将图片设计为背景" class="headerlink" title="2.将图片设计为背景"></a>2.将图片设计为背景</h1><h4 id="这点其实不难，重点在于要记得这个操作在设计选项卡下，选择页面颜色，选择填充效果"><a href="#这点其实不难，重点在于要记得这个操作在设计选项卡下，选择页面颜色，选择填充效果" class="headerlink" title="这点其实不难，重点在于要记得这个操作在设计选项卡下，选择页面颜色，选择填充效果"></a>这点其实不难，重点在于要记得这个操作在设计选项卡下，选择页面颜色，选择填充效果</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph TD;</span><br><span class="line">    选择设计选项卡--&gt;页面颜色;</span><br><span class="line">    页面颜色--&gt;填充;</span><br><span class="line">    填充--&gt;图片选择;</span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="细节如下："><a href="#细节如下：" class="headerlink" title="细节如下："></a>细节如下：</h2><h5 id="这个难度不大，也就是需要注意使用图片路径寻找图片最为容易"><a href="#这个难度不大，也就是需要注意使用图片路径寻找图片最为容易" class="headerlink" title="这个难度不大，也就是需要注意使用图片路径寻找图片最为容易"></a>这个难度不大，也就是需要注意使用图片路径寻找图片最为容易</h5><h1 id="Excel第一天"><a href="#Excel第一天" class="headerlink" title="Excel第一天"></a>Excel第一天</h1><h3 id="因为我对Excel了解最少，使用也最少，所以对其尽量细心记录"><a href="#因为我对Excel了解最少，使用也最少，所以对其尽量细心记录" class="headerlink" title="因为我对Excel了解最少，使用也最少，所以对其尽量细心记录"></a>因为我对Excel了解最少，使用也最少，所以对其尽量细心记录</h3><h5 id="今天的这个题目，第一步就有一个需要注意的！！！！在套用表格样式时，要注意别选中那种合并过单元格的，不然会出现错误！！！"><a href="#今天的这个题目，第一步就有一个需要注意的！！！！在套用表格样式时，要注意别选中那种合并过单元格的，不然会出现错误！！！" class="headerlink" title="今天的这个题目，第一步就有一个需要注意的！！！！在套用表格样式时，要注意别选中那种合并过单元格的，不然会出现错误！！！"></a>今天的这个题目，第一步就有一个需要注意的！！！！在套用表格样式时，要注意别选中那种合并过单元格的，不然会出现错误！！！</h5><h5 id="第一步介绍了一种快捷键，用于选择：Ctrl-shift-方向键"><a href="#第一步介绍了一种快捷键，用于选择：Ctrl-shift-方向键" class="headerlink" title="第一步介绍了一种快捷键，用于选择：Ctrl+shift+方向键"></a>第一步介绍了一种快捷键，用于选择：Ctrl+shift+方向键</h5><h2 id="接触的第一个Excel题目用到的函数："><a href="#接触的第一个Excel题目用到的函数：" class="headerlink" title="接触的第一个Excel题目用到的函数："></a>接触的第一个Excel题目用到的函数：</h2><h3 id="vlookup（）：跨表纵向查询填充函数"><a href="#vlookup（）：跨表纵向查询填充函数" class="headerlink" title="vlookup（）：跨表纵向查询填充函数"></a>vlookup（）：跨表纵向查询填充函数</h3><h5 id="格式：vlookup（查询对象，查询的数据区域，结果在数据区中的列数，精确匹配还是近似匹配）"><a href="#格式：vlookup（查询对象，查询的数据区域，结果在数据区中的列数，精确匹配还是近似匹配）" class="headerlink" title="格式：vlookup（查询对象，查询的数据区域，结果在数据区中的列数，精确匹配还是近似匹配）"></a>格式：vlookup（查询对象，查询的数据区域，结果在数据区中的列数，精确匹配还是近似匹配）</h5><h5 id="我的理解：vlookup（找什么，在哪找，结果在哪一列，找一模一样的还是差不多就行）"><a href="#我的理解：vlookup（找什么，在哪找，结果在哪一列，找一模一样的还是差不多就行）" class="headerlink" title="我的理解：vlookup（找什么，在哪找，结果在哪一列，找一模一样的还是差不多就行）"></a>我的理解：vlookup（找什么，在哪找，结果在哪一列，找一模一样的还是差不多就行）</h5><h2 id="sum（）：求和函数"><a href="#sum（）：求和函数" class="headerlink" title="sum（）：求和函数"></a>sum（）：求和函数</h2><h4 id="格式：sum-需要求和的数据"><a href="#格式：sum-需要求和的数据" class="headerlink" title="格式：sum(需要求和的数据)"></a>格式：sum(需要求和的数据)</h4><h3 id="sumifs-：多条件求和函数"><a href="#sumifs-：多条件求和函数" class="headerlink" title="sumifs()：多条件求和函数"></a>sumifs()：多条件求和函数</h3><h4 id="格式：sumifs（计算求和区域，条件区域，条件，条件区域，条件）"><a href="#格式：sumifs（计算求和区域，条件区域，条件，条件区域，条件）" class="headerlink" title="格式：sumifs（计算求和区域，条件区域，条件，条件区域，条件）"></a>格式：sumifs（计算求和区域，条件区域，条件，条件区域，条件）</h4><h4 id="我的理解：后面每多一个条件就要多一个条件区域，哪怕这题的日期选择也要再写一遍选中日期那一列为条件区域，不可以直接再写一遍日期！！！！！！！！！！！！！"><a href="#我的理解：后面每多一个条件就要多一个条件区域，哪怕这题的日期选择也要再写一遍选中日期那一列为条件区域，不可以直接再写一遍日期！！！！！！！！！！！！！" class="headerlink" title="我的理解：后面每多一个条件就要多一个条件区域，哪怕这题的日期选择也要再写一遍选中日期那一列为条件区域，不可以直接再写一遍日期！！！！！！！！！！！！！"></a>我的理解：后面每多一个条件就要多一个条件区域，哪怕这题的日期选择也要再写一遍选中日期那一列为条件区域，不可以直接再写一遍日期！！！！！！！！！！！！！</h4><h1 id="PPT第一天"><a href="#PPT第一天" class="headerlink" title="PPT第一天"></a>PPT第一天</h1><h2 id="这个题目主体都可以理解，注意三个知识点："><a href="#这个题目主体都可以理解，注意三个知识点：" class="headerlink" title="这个题目主体都可以理解，注意三个知识点："></a>这个题目主体都可以理解，注意三个知识点：</h2><h4 id="第一步里面要求以word为基础导入成为PPT文件，这里用到”导入到大纲“："><a href="#第一步里面要求以word为基础导入成为PPT文件，这里用到”导入到大纲“：" class="headerlink" title="第一步里面要求以word为基础导入成为PPT文件，这里用到”导入到大纲“："></a>第一步里面要求以word为基础导入成为PPT文件，这里用到”导入到大纲“：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    新建幻灯片--&gt;幻灯片从大纲;</span><br><span class="line">  幻灯片从大纲--&gt;选择对应文件导入;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="SmartArt：这个东西其实就是把文本转换成图形："><a href="#SmartArt：这个东西其实就是把文本转换成图形：" class="headerlink" title="SmartArt：这个东西其实就是把文本转换成图形："></a>SmartArt：这个东西其实就是把文本转换成图形：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    选择对应文本--&gt;点击转换为SmartArt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<h3 id="这个东西也可以直接新建一个！！不过推荐用这种选中文本的方式（依据题意）"><a href="#这个东西也可以直接新建一个！！不过推荐用这种选中文本的方式（依据题意）" class="headerlink" title="这个东西也可以直接新建一个！！不过推荐用这种选中文本的方式（依据题意）"></a>这个东西也可以直接新建一个！！不过推荐用这种选中文本的方式（依据题意）</h3><h2 id="自定义放映方案：这个没啥好说的直接上流程图："><a href="#自定义放映方案：这个没啥好说的直接上流程图：" class="headerlink" title="自定义放映方案：这个没啥好说的直接上流程图："></a>自定义放映方案：这个没啥好说的直接上流程图：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    点击幻灯片放映选项卡--&gt;点击自定义放映;</span><br><span class="line">   点击自定义放映--&gt;点击新建;</span><br><span class="line">   点击新建--&gt;勾选需要加入放映方案的幻灯片</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结：今天的题目主体难度不大，但Excel表格的函数和word的许多细节有待加强！！！！PPT的题目阅读能力也还有所欠缺。"><a href="#总结：今天的题目主体难度不大，但Excel表格的函数和word的许多细节有待加强！！！！PPT的题目阅读能力也还有所欠缺。" class="headerlink" title="总结：今天的题目主体难度不大，但Excel表格的函数和word的许多细节有待加强！！！！PPT的题目阅读能力也还有所欠缺。"></a>总结：今天的题目主体难度不大，但Excel表格的函数和word的许多细节有待加强！！！！PPT的题目阅读能力也还有所欠缺。</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/1970/01/01/draftsRecover/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7/2.%E7%AC%AC%E4%B8%80%E5%A4%A9%E8%AE%A1%E5%88%92/" data-id="ckq7xpibq0008opps5t3078mb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/1970/01/01/draftsRecover/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7/1.%E5%89%8D%E8%A8%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/1970/01/01/draftsRecover/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7/3.%E7%AC%AC%E4%BA%8C%E5%A4%A9%E8%AE%A1%E5%88%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/1970/01/01/draftsRecover/2021-5-1%202021-5-1%202021-5-1%20%E4%B8%8B%E8%BD%BD%E4%B8%AD%E2%80%A6%20110132%20110223%20123448/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/1970/01/01/draftsRecover/web%E5%89%8D%E7%AB%AF/2.HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%20/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/1970/01/01/draftsRecover/4.%E7%BD%91%E7%BB%9C%E5%B1%82%E5%8D%8F%E8%AE%AE%E9%9B%86IP%E7%BC%96%E5%9D%80/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/1970/01/01/draftsRecover/web%E5%89%8D%E7%AB%AF/3.%E7%BB%93%E6%9E%84%E8%AF%AD%E4%B9%89%20/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
